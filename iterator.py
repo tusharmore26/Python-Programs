@@ -1,0 +1,5 @@
+thistuple=("Pune","Mumbai","Solapur","Benglore")
+new=iter(thistuple)
+print(next(new))
+print(next(new))
+print(next(new))
