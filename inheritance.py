@@ -1,24 +1,25 @@
-class parent:
-    def __init__(self,name,lname):
-        self.name=name
+# parent class
+
+class person:
+    def __init__(self,fname,lname):
+        self.fname=fname
         self.lname=lname
 
-    def function(self):
-        print("Name of the student is :",self.name)
-        print("Last name is :",self.lname)
+    def __str__(self):
+        print(self.fname,self.lname)
 
-class child(parent):
-    def __init__(self,name,lname,city):
-        super().__init__(name,lname)
-        self.city=city
+# child class
 
-    def welcome(self):
-        print("Welcome ",self.name,self.lname," in ",self.city)
+class student(person):
+    def __init__(self, fname, lname):
+        super().__init__(fname, lname)
+        # pass
+
+
+        
+
+
+s1=student("Tushar", "More")
+s1.__str__()
+
     
-
-ch=child("Tushar","More","Pune")
-ch.welcome()
-ch.function()
-
-
-
